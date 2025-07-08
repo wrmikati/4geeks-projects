@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Instagram Feed</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="d-flex align-items-center gap-1 bg-light p-3">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+        <button type="button" class="btn btn-success ms-auto" data-bs-toggle="modal" data-bs-target="#new-post">
+          Create a new post
+        </button>
+        <div class="btn-group">
+          <button
+            type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-cog"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy & Data</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="new-post" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create a new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-grid gap-1">
+            <label for="caption">Caption:</label>
+            <textarea class="form-control" rows="2" placeholder="Add the caption of your post here"></textarea>
+            <div class="d-flex gap-1">
+              <button class="btn btn-light">
+                <i class="fa-solid fa-camera"></i>
+              </button>
+              <button class="btn btn-light">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Nav -->
+    <nav class="my-3">
+      <div class="nav nav-tabs justify-content-center border-0" id="nav-tab" role="tablist">
+        <button
+          class="nav-link active border-0"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-grid"
+          type="button"
+          role="tab"
+          aria-controls="nav-grid"
+          aria-selected="true"
+        >
+          <i class="fa-solid fa-border-all"></i>
+        </button>
+        <button
+          class="nav-link border-0"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-feed"
+          type="button"
+          role="tab"
+          aria-controls="nav-feed"
+          aria-selected="false"
+        >
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Tabs -->
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab" tabindex="0">
+        <div class="container">
+          <div class="row row-cols-3">
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=1" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=2" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=3" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=4" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=5" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=6" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=7" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=8" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=9" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=10" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=11" />
+            <img class="col p-1" src="https://picsum.photos/1080/1080?random=12" />
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-feed" role="tabpanel" aria-labelledby="nav-feed-tab" tabindex="0">
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4 class="align-self-center">Title secion</h4>
+              <p class="ms-auto">02/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=1" />
+            <div class="card-body">
+              <div class="card-title"><b>604 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">05/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=2" />
+            <div class="card-body">
+              <div class="card-title"><b>985 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">12/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=3" />
+            <div class="card-body">
+              <div class="card-title"><b>561 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">12/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=4" />
+            <div class="card-body">
+              <div class="card-title"><b>957 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">09/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=5" />
+            <div class="card-body">
+              <div class="card-title"><b>215 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">05/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=6" />
+            <div class="card-body">
+              <div class="card-title"><b>924 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">06/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=7" />
+            <div class="card-body">
+              <div class="card-title"><b>928 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">01/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=8" />
+            <div class="card-body">
+              <div class="card-title"><b>848 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">02/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=9" />
+            <div class="card-body">
+              <div class="card-title"><b>868 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">07/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=10" />
+            <div class="card-body">
+              <div class="card-title"><b>915 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">06/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=11" />
+            <div class="card-body">
+              <div class="card-title"><b>421 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="card m-auto w-50 mb-3">
+            <div class="card-header d-flex">
+              <h4>Title secion</h4>
+              <p class="ms-auto">04/2025</p>
+            </div>
+            <img class="w-100" src="https://picsum.photos/1080/1080?random=12" />
+            <div class="card-body">
+              <div class="card-title"><b>594 likes</b></div>
+              <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit, nobis vitae deleniti nesciunt nemo perspiciatis officia saepe officiis maiores consequuntur perferendis quisquam alias odio ad eveniet, recusandae nam iste?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
